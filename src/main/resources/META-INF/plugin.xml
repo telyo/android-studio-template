@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.github.telyo.androidstudiotemplate</id>
+    <id>com.telyo.template</id>
     <name>android-studio-template</name>
     <vendor>telyo</vendor>
 
@@ -7,13 +7,23 @@
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.telyo.androidstudiotemplate.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.telyo.androidstudiotemplate.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.telyo.template.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.telyo.template.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.telyo.androidstudiotemplate.listeners.MyProjectManagerListener"
+        <listener class="com.telyo.template.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="temp.ArmsPluginTemplateProviderImpl" />
+    </extensions>
 </idea-plugin>
