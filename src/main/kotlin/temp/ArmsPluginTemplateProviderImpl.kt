@@ -20,9 +20,6 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
             formFactor = FormFactor.Mobile
             screens = listOf(WizardUiContext.ActivityGallery, WizardUiContext.MenuEntry, WizardUiContext.NewProject, WizardUiContext.NewModule)
             thumb { File("template_blank_activity.png") }
-            recipe = { te ->
-                armsRecipe(this@ArmsPluginTemplateProviderImpl, (te as ModuleTemplateData))
-            }
 
             widgets(
                     TextFieldWidget(pageName),
@@ -47,6 +44,9 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
                     TextFieldWidget(moudlePackageName)
                     )
 
+            recipe = { te ->
+                armsRecipe(this@ArmsPluginTemplateProviderImpl, (te as ModuleTemplateData))
+            }
         }
 
 
