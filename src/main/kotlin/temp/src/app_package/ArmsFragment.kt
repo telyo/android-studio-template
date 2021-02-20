@@ -3,7 +3,6 @@ package temp.src.app_package
 import temp.ArmsPluginTemplateProviderImpl
 
 fun armsFragment(provider: ArmsPluginTemplateProviderImpl) = """
-    
 package ${provider.fragmentPackageName.value}
 
 import android.os.Bundle

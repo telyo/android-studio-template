@@ -3,7 +3,6 @@ package temp.src.app_package
 import temp.ArmsPluginTemplateProviderImpl
 
 fun armsActivity(provider: ArmsPluginTemplateProviderImpl) = """
-    
 package ${provider.activityPackageName.value}
 
 import android.content.Intent
