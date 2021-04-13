@@ -1,6 +1,6 @@
-package temp.src.app_package
+package temparms.src.app_package
 
-import temp.ArmsPluginTemplateProviderImpl
+import temparms.ArmsPluginTemplateProviderImpl
 
 fun armsActivity(provider: ArmsPluginTemplateProviderImpl) = """
 package ${provider.activityPackageName.value}

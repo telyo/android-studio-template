@@ -1,4 +1,4 @@
-package temp
+package temparms
 
 import com.android.tools.idea.wizard.template.*
 import com.android.tools.idea.wizard.template.impl.activities.common.MIN_API
@@ -23,6 +23,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
 
             widgets(
                     TextFieldWidget(pageName),
+                    PackageNameWidget(appPackageName),
                     TextFieldWidget(appPackageName),
                     CheckBoxWidget(needActivity),
                     CheckBoxWidget(isModule),
@@ -42,7 +43,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
                     CheckBoxWidget(needDagger),
                     TextFieldWidget(componentPackageName),
                     TextFieldWidget(moudlePackageName)
-                    )
+            )
 
             recipe = { te ->
                 armsRecipe(this@ArmsPluginTemplateProviderImpl, (te as ModuleTemplateData))

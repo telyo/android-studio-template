@@ -1,17 +1,21 @@
 <idea-plugin>
     <id>com.telyo.template</id>
-    <name>arms-template</name>
+    <name>telyo_mvp</name>
     <vendo>telyo</vendo>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
 
     <depends>org.jetbrains.android</depends>
     <depends>org.jetbrains.kotlin</depends>
     <depends>com.intellij.modules.java</depends>
     <depends>com.intellij.modules.platform</depends>
 
+    <description>Integrates Volume Snapshot Service W10</description>
+    <change-notes>Initial release of the plugin.</change-notes>
+
+
+    <version>1.0.0</version>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.telyo.template.services.MyApplicationService"/>
@@ -24,6 +28,6 @@
     </applicationListeners>
 
     <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
-        <wizardTemplateProvider implementation="temp.ArmsPluginTemplateProviderImpl" />
+        <wizardTemplateProvider implementation="temparms.ArmsPluginTemplateProviderImpl" />
     </extensions>
 </idea-plugin>

@@ -1,6 +1,6 @@
-package temp.src.app_package
+package temparms.src.app_package
 
-import temp.ArmsPluginTemplateProviderImpl
+import temparms.ArmsPluginTemplateProviderImpl
 
 fun armsPresenter(provider: ArmsPluginTemplateProviderImpl) = """
 package ${provider.presenterPackageName.value}

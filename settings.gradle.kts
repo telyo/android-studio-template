@@ -1,1 +1,1 @@
-rootProject.name = "android-studio-template"
+rootProject.name = "telyo_mvp"

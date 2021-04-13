@@ -1,10 +1,10 @@
-package temp
+package temparms
 
 import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.RecipeExecutor
-import temp.res.layout.simpleLayout
-import temp.src.app_package.*
-import temp.src.armsManifest
+import temparms.res.layout.simpleLayout
+import temparms.src.app_package.*
+import temparms.src.armsManifest
 import java.io.File
 
 fun RecipeExecutor.armsRecipe(provider:ArmsPluginTemplateProviderImpl,data: ModuleTemplateData){

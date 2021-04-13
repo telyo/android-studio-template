@@ -1,6 +1,6 @@
-package temp.src
+package temparms.src
 
-import temp.ArmsPluginTemplateProviderImpl
+import temparms.ArmsPluginTemplateProviderImpl
 
 fun armsManifest(provider: ArmsPluginTemplateProviderImpl)= """
     
