@@ -1,4 +1,4 @@
-package temparms
+package other.temparms
 
 import com.android.tools.idea.wizard.template.*
 import com.android.tools.idea.wizard.template.impl.activities.common.MIN_API
@@ -45,6 +45,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
                     TextFieldWidget(moudlePackageName)
             )
 
+            //创建所需文件
             recipe = { te ->
                 armsRecipe(this@ArmsPluginTemplateProviderImpl, (te as ModuleTemplateData))
             }
@@ -54,7 +55,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
     //新建页面名称
     val pageName = stringParameter {
         name = "Page Name"
-        constraints = listOf(Constraint.UNIQUE, Constraint.NONEMPTY)
+        constraints = listOf(Constraint.UNIQUE, Constraint.NONEMPTY,Constraint.STRING)
         default = "Main"
         help = "请填写页面名,如填写 Main,会自动生成 MainActivity, MainPresenter 等文件"
     }
@@ -78,7 +79,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
     val isModule = booleanParameter {
         name = "Is Module"
         default = true
-        help = "是否是组件化模块，如果是就会在两个AndroidMainfest.xml都加上activity标签"
+        help = "是否是组件化模块，如果是就会在两个AndroidManifest.xml都加上activity标签"
     }
 
     //layout xml 文件
@@ -102,9 +103,10 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
     //Activity 路径
     val activityPackageName = stringParameter {
         name = "Ativity Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.ui.activity" }
         visible = { needActivity.value }
+        default = ".mvp.ui.activity"
         help = "Activity 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -136,9 +138,10 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
     //fragment 路径
     val fragmentPackageName = stringParameter {
         name = "Fragment Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.ui.fragment" }
         visible = { needFragment.value }
+        default = ".mvp.ui.fragment"
         help = "Fragment 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -152,9 +155,10 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
 
     val contractPackageName = stringParameter {
         name = "Contract Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.contract" }
         visible = { needContract.value }
+        default = ".mvp.contract"
         help = "Contract 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -166,9 +170,10 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
 
     val presenterPackageName = stringParameter {
         name = "Presenter Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.presenter" }
         visible = { needPresenter.value }
+        default = ".mvp.presenter"
         help = "Presenter 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -180,9 +185,10 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
 
     val modelPackageName = stringParameter {
         name = "Model Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.model" }
         visible = { needModel.value }
+        default = ".mvp.model"
         help = "Model 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
 
     }
@@ -195,16 +201,18 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
     }
     val componentPackageName = stringParameter {
         name = "Component Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.di.component" }
         visible = { needDagger.value }
+        default = ".di.component"
         help = "Component 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
     val moudlePackageName = stringParameter {
         name = "Moudle Package Name"
-        constraints = listOf(Constraint.PACKAGE)
+        constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.di.module" }
         visible = { needDagger.value }
+        default = ".di.module"
         help = "Moudle 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 

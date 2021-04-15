@@ -1,6 +1,6 @@
-package temparms.res.layout
+package other.temparms.res.layout
 
-import temparms.ArmsPluginTemplateProviderImpl
+import other.temparms.ArmsPluginTemplateProviderImpl
 
 fun simpleLayout(provider: ArmsPluginTemplateProviderImpl)= """
 <?xml version="1.0" encoding="utf-8"?>

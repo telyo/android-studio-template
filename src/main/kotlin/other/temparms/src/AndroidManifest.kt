@@ -1,6 +1,6 @@
-package temparms.src
+package other.temparms.src
 
-import temparms.ArmsPluginTemplateProviderImpl
+import other.temparms.ArmsPluginTemplateProviderImpl
 
 fun armsManifest(provider: ArmsPluginTemplateProviderImpl)= """
     
@@ -9,11 +9,8 @@ package="${provider.appPackageName.value}">
     <application>
         ${if (provider.isModule.value){
     """
-        <activity android:name="${provider.activityPackageName.value}.${provider.pageName}Activity">
-	        <intent-filter>
-	            <action android:name="android.intent.action.MAIN" />
-	            <category android:name="android.intent.category.LAUNCHER" />
-	        </intent-filter>
+        <activity android:name="${provider.activityPackageName.value}.${provider.pageName}Activity"
+         android:screenOrientation="portrait">
 	    </activity> 
     """
 }else{

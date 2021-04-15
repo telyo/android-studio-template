@@ -1,6 +1,6 @@
-package temparms.src.app_package
+package other.temparms.src.app_package
 
-import temparms.ArmsPluginTemplateProviderImpl
+import other.temparms.ArmsPluginTemplateProviderImpl
 
 fun armsModel(provider: ArmsPluginTemplateProviderImpl) = """
 package ${provider.modelPackageName.value}

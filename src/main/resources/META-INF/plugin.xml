@@ -28,6 +28,6 @@
     </applicationListeners>
 
     <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
-        <wizardTemplateProvider implementation="temparms.ArmsPluginTemplateProviderImpl" />
+        <wizardTemplateProvider implementation="other.temparms.ArmsPluginTemplateProviderImpl" />
     </extensions>
 </idea-plugin>
