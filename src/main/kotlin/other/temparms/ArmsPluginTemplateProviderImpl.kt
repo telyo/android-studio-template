@@ -12,7 +12,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
     val armsTemplate: Template
         get() = template {
             revision = 1
-            name = "Arms 全家桶"
+            name = "Arms 全家桶 插件版"
             description = "一键创建 MVPArms(被telyo扩展后)单个页面所需要的全部组件"
             minApi = MIN_API
             minBuildApi = MIN_API
@@ -106,7 +106,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.ui.activity" }
         visible = { needActivity.value }
-        default = ".mvp.ui.activity"
+        default ="${appPackageName.value}.mvp.ui.activity"
         help = "Activity 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -141,7 +141,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.ui.fragment" }
         visible = { needFragment.value }
-        default = ".mvp.ui.fragment"
+        default = "${appPackageName.value}.mvp.ui.fragment"
         help = "Fragment 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -158,7 +158,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.contract" }
         visible = { needContract.value }
-        default = ".mvp.contract"
+        default = "${appPackageName.value}.mvp.contract"
         help = "Contract 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -173,7 +173,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.presenter" }
         visible = { needPresenter.value }
-        default = ".mvp.presenter"
+        default ="${appPackageName.value}.mvp.presenter"
         help = "Presenter 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 
@@ -188,7 +188,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.mvp.model" }
         visible = { needModel.value }
-        default = ".mvp.model"
+        default ="${appPackageName.value}.mvp.model"
         help = "Model 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
 
     }
@@ -204,7 +204,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.di.component" }
         visible = { needDagger.value }
-        default = ".di.component"
+        default = "${appPackageName.value}.di.component"
         help = "Component 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
     val moudlePackageName = stringParameter {
@@ -212,7 +212,7 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
         constraints = listOf(Constraint.STRING)
         suggest = { "${appPackageName.value}.di.module" }
         visible = { needDagger.value }
-        default = ".di.module"
+        default = "${appPackageName.value}.di.module"
         help = "Moudle 将被输出到此包下,请认真核实此包名是否是你需要输出的目标包名"
     }
 

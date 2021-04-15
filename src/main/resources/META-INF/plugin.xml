@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.telyo.template</id>
-    <name>telyo_mvp</name>
+    <name>ArmsMvpCreator</name>
     <vendo>telyo</vendo>
 
     <!-- Product and plugin compatibility requirements -->

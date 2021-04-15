@@ -9,14 +9,14 @@ package="${provider.appPackageName.value}">
     <application>
         ${if (provider.isModule.value){
     """
-        <activity android:name="${provider.activityPackageName.value}.${provider.pageName}Activity"
+        <activity android:name="${provider.activityPackageName.value}.${provider.pageName.value}Activity"
          android:screenOrientation="portrait">
 	    </activity> 
     """
 }else{
     """
         <activity
-	        android:name="${provider.activityPackageName.value}.${provider.pageName}Activity"
+	        android:name="${provider.activityPackageName.value}.${provider.pageName.value}Activity"
             android:screenOrientation="portrait"
 	        />
     """

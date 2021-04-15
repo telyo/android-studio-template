@@ -9,7 +9,7 @@ import android.content.Intent
 import android.os.Bundle
 
 import com.jess.arms.di.component.AppComponent
-import com.jess.arms.utils.ArmsUtils
+
 import com.dresses.library.base.BaseMvpActivity
 
 import ${provider.componentPackageName.value}.Dagger${provider.pageName.value}Component
