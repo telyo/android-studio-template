@@ -46,7 +46,7 @@ interface ${provider.pageName.value}Component {
     """
 } else if (provider.needActivity.value || provider.needFragment.value)
     """
-    fun inject( ${if (provider.needFragment.value) "fragment:${provider.pageName.value}Fragment" else "activity:${provider.pageName.value}Activity)\n"}"""
+    fun inject( ${if (provider.needFragment.value) "fragment:${provider.pageName.value}Fragment)" else "activity:${provider.pageName.value}Activity)\n"}"""
 else ""
 }
 }

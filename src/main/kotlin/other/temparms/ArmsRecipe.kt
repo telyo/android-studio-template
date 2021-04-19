@@ -48,7 +48,7 @@ fun RecipeExecutor.armsRecipe(provider:ArmsPluginTemplateProviderImpl,data: Modu
 
     if (provider.needDagger.value){
         val componentFile = File(data.rootDir,"${fFmSlashedPackageName(provider.componentPackageName.value)}/${provider.pageName.value}Component.kt")
-        val moduleFile = File(data.rootDir,"${fFmSlashedPackageName(provider.componentPackageName.value)}/${provider.pageName.value}Module.kt")
+        val moduleFile = File(data.rootDir,"${fFmSlashedPackageName(provider.moudlePackageName.value)}/${provider.pageName.value}Module.kt")
         save(armsComponent(provider),componentFile)
         save(armsModule(provider),moduleFile)
     }
