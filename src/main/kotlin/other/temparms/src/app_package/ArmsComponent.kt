@@ -13,18 +13,18 @@ import ${provider.moudlePackageName.value}.${provider.pageName.value}Module
 ${if (provider.needActivity.value && provider.needFragment.value)
     """
 import com.jess.arms.di.scope.ActivityScope
-import ${provider.activityPackageName}.${provider.pageName.value}Activity
-import ${provider.fragmentPackageName}.${provider.pageName.value}Fragment
+import ${provider.activityPackageName.value}.${provider.pageName.value}Activity
+import ${provider.fragmentPackageName.value}.${provider.pageName.value}Fragment
 """
 else if (provider.needActivity.value)
     """
 import com.jess.arms.di.scope.ActivityScope
-import ${provider.activityPackageName}.${provider.pageName.value}Activity
+import ${provider.activityPackageName.value}.${provider.pageName.value}Activity
 """
 else if (provider.needFragment.value)
     """
 import com.jess.arms.di.scope.FragmentScope
-import ${provider.fragmentPackageName}.${provider.pageName.value}Fragment
+import ${provider.fragmentPackageName.value}.${provider.pageName.value}Fragment
 """
 else ""
 }
