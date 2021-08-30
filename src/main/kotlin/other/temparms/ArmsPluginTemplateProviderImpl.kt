@@ -11,11 +11,9 @@ class ArmsPluginTemplateProviderImpl : WizardTemplateProvider() {
 
     val armsTemplate: Template
         get() = template {
-            revision = 1
             name = "Arms 全家桶 插件版"
             description = "一键创建 MVPArms(被telyo扩展后)单个页面所需要的全部组件"
             minApi = MIN_API
-            minBuildApi = MIN_API
             category = Category.Activity
             formFactor = FormFactor.Mobile
             screens = listOf(WizardUiContext.ActivityGallery, WizardUiContext.MenuEntry, WizardUiContext.NewProject, WizardUiContext.NewModule)
